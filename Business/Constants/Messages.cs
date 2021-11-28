@@ -13,6 +13,7 @@ namespace Business.Constants
         public static string ProductAdded = "Ürün eklendi";
         public static string ProductNameInvalid = "Ürün ismi geçersiz";
         public static string ProductUpdated = "Ürün güncellendi";
+        public static string ProductDeleted = "Ürün silindi";
         public static string MaintenanceTime = "Sistem bakımda";
         public static string ProductsListed = "Ürünler listelendi";
         public static string ProductCountofCategoryError="Bir kategoride en fazla 10 ürün olabilir";
@@ -30,6 +31,7 @@ namespace Business.Constants
         public static string AddressUpdated = "Adres güncellendi";
         public static string BasketAdded = "Sepet eklendi";
         public static string BasketUpdated = "Sepet güncellendi";
+
         //internal static string UserRegistered;
         //internal static User UserNotFound;
         //internal static User PasswordError;

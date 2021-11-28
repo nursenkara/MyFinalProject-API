@@ -110,6 +110,12 @@ namespace Business.Concrete
 
             return new SuccessResult(Messages.ProductUpdated);
         }
+        public IResult Delete(Product product)
+        {
+            _productDal.Delete(product);
+
+            return new SuccessResult(Messages.ProductDeleted);
+        }
         private IResult CheckIfProductOfCategoryCorrect(int categoryId)
         {
             var result = _productDal.GetAll(p => p.CategoryId == categoryId).Count;
