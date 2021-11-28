@@ -12,5 +12,6 @@ namespace Business.Abstract
         IDataResult<Address> GetById(int addressId);
         IResult Add(Address address);
         IResult Update(Address address);
+        IResult Delete(Address address);
     }
 }

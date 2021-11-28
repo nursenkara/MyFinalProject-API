@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
+using Business.Constants;
 using Core.Entities.Concrete;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using System;
 using System.Collections.Generic;
@@ -25,7 +27,12 @@ namespace Business.Concrete
         {
             _userDal.Add(user);
         }
+        public IResult Delete(User user)
+        {
+            _userDal.Delete(user);
 
+            return new SuccessResult(Messages.UserDeleted);
+        }
         public User GetByMail(string email)
         {
             return _userDal.Get(u => u.Email == email);

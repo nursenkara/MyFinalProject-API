@@ -14,5 +14,6 @@ namespace Business.Abstract
         IResult Add(Order order);
         //void döndürenler için IResult
         IResult Update(Order order);
+        IResult Delete(Order order);
     }
 }

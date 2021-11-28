@@ -31,6 +31,7 @@ namespace Business.Constants
         public static string AddressUpdated = "Adres güncellendi";
         public static string BasketAdded = "Sepet eklendi";
         public static string BasketUpdated = "Sepet güncellendi";
+        public static string UserDeleted = "Kullanıcı silindi";
 
         //internal static string UserRegistered;
         //internal static User UserNotFound;
