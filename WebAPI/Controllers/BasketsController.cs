@@ -51,5 +51,17 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+
+        [HttpDelete("delete")]
+        public IActionResult Delete(Basket basket)
+        {
+            var result = _basketService.Delete(basket);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

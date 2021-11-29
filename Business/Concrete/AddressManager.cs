@@ -27,7 +27,16 @@ namespace Business.Concrete
             _addressDal.Add(address);
             return new SuccessResult(Messages.AddressAdded);
         }
-
+        public IResult Delete(Address address)
+        {
+            IResult result = BusinessRules.Run();
+            if (result != null)
+            {
+                return result;
+            }
+            _addressDal.Delete(address);
+            return new SuccessResult(Messages.AddressDeleted);
+        }
         public IDataResult<List<Address>> GetAll()
         {
             return new SuccessDataResult<List<Address>>(_addressDal.GetAll());

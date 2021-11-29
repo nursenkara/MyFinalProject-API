@@ -21,17 +21,23 @@ namespace Business.Constants
         public static string CategoryLimitExceed="Kategori limiti aşıldığı için yeni ürün eklenemiyor";
         public static string CategoryAdded = "Kategori eklendi";
         public static string CategoryUpdated = "Kategori güncellendi";
+        public static string CategoryDeleted = "Kategori silindi";
         public static string BrandAdded = "Marka eklendi";
         public static string BrandUpdated = "Marka güncellendi";
+        public static string BrandDeleted = "Marka silindi";
         public static string AuthorizationDenied="Yetkiniz yok.";
         public static string OrderAdded = "Sipariş eklendi";
         public static string OrdersListed = "Siparişler listelendi";
         public static string OrderUpdated = "Sipariş güncellendi";
+        public static string OrderDeleted = "Sipariş silindi";
         public static string AddressAdded = "Adres eklendi";
         public static string AddressUpdated = "Adres güncellendi";
+        public static string AddressDeleted = "Adres silindi";
         public static string BasketAdded = "Sepet eklendi";
         public static string BasketUpdated = "Sepet güncellendi";
+        public static string BasketDeleted = "Sepet silindi";
         public static string UserDeleted = "Kullanıcı silindi";
+
 
         //internal static string UserRegistered;
         //internal static User UserNotFound;

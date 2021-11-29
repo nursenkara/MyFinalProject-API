@@ -52,6 +52,16 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpDelete("delete")]
+        public IActionResult Delete(Order order)
+        {
+            var result = _orderService.Delete(order);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
         [HttpPut("update")]
         public IActionResult Update(Order order)
         {

@@ -59,5 +59,15 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpDelete("delete")]
+        public IActionResult Delete(Address address)
+        {
+            var result = _addressService.Delete(address);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

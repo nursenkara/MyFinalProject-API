@@ -37,10 +37,22 @@ namespace Business.Concrete
 
             return new SuccessResult(Messages.OrderAdded);
         }
+        public IResult Delete(Order order)
+        {
+            IResult result = BusinessRules.Run();
+            if (result != null)
+            {
+                return result;
+
+            }
+
+            _orderDal.Delete(order);
+
+            return new SuccessResult(Messages.OrderDeleted);
+        }
 
         public IDataResult<List<Order>> GetAll()
         {
-           
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll(), Messages.OrdersListed);
         }
 

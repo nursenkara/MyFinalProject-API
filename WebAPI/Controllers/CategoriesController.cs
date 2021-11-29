@@ -60,5 +60,15 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpDelete("delete")]
+        public IActionResult Delete(Category category)
+        {
+            var result = _categoryService.Delete(category);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

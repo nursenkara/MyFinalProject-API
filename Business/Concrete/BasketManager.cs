@@ -16,11 +16,11 @@ namespace Business.Concrete
         {
             _basketDal = basketDal;
         }
-        //public IResult Add(Basket basket)
-        //{
-        //    _basketDal.Add(basket);
-        //    return new SuccessResult(Messages.BasketAdded);
-        //}
+        public IResult Delete(Basket basket)
+        {
+            _basketDal.Delete(basket);
+            return new SuccessResult(Messages.BasketDeleted);
+        }
 
         public IDataResult<List<Basket>> GetAll()
         {

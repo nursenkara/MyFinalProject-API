@@ -43,6 +43,20 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CategoryAdded);
 
         }
+        public IResult Delete(Category category)
+        {
+            IResult result = BusinessRules.Run();
+            if (result != null)
+            {
+                return result;
+
+            }
+
+            _categoryDal.Delete(category);
+
+            return new SuccessResult(Messages.CategoryDeleted);
+
+        }
         public IResult Update(Category category)
         {
             IResult result = BusinessRules.Run();
